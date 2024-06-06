@@ -21,9 +21,10 @@ const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
 const chatbotToggeler = document.querySelector(".chatbot-toggler");
 const chatbotCloseBtn = document.querySelector(".close-btn");
+require('dotenv').congif();
 
 let userMessage;
-const API_KEY = "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";
+const API_KEY = process.env.API_KEY;
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
