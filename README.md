@@ -1,9 +1,9 @@
 
-# Password strength classifier
+# Password Analyzer
 
 
 
-## Run Locally
+## To Run Locally
 
 Clone the project
 
