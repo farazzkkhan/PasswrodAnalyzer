@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Stregth Analyzer</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+</head>
+<body>
+    <br>
+    <h1 style="text-align: center;"><b><i>Password Strength Analyzer</i></b></h1>
+
+    <div class="middle">
+        
+    </div>
+
+    <div class="imp">
+        <h2><b>Here are some points that we should remember while creating a password.</b></h2>
+        <ol>
+            <li>Creating a strong password is essential to protect your accounts and data. Here are some tips:</li>
+            <li>Use a minimum of 8 characters.</li>
+            <li>Include a mix of upper and lower case letters, numbers, and special characters.</li>
+            <li>Avoid using easily guessable information like names, birthdays, or common words.</li>
+            <li>Now Enter your password below and get to know your password strength and the estimated time to crack that password (the time shown is almost accurate)</li>
+        </ol>
+    </div>
+
+    <div class="bottom">
+        <h2>Enter your password here: </h2>
+        <form>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <button type="button" type="submit" onclick="processInput()">Check Password</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <!--<a href="{{ url_for('charsymbol1') }}">asdfs</a>
+    <a href="{{ url_for('specialsymbol1') }}">asdfsrvsdgfs</a>
+    <a href="{{ url_for('periodpassword1') }}">owdhfwduhfjsasdfs</a>
+    -->
+    <!--
+    <button onclick="processInput()">Check Password</button>
+    <div id="result"></div>-->
+
+    <!--here starts the chatbot if this does not work you know what to do-->
+    
+    <button class="chatbot-toggler">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>JARVIS</h2>
+            <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi I'm Jarvis <br> How can I help you ? </p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter your Query here...." required></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
